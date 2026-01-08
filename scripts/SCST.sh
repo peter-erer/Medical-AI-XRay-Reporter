@@ -1,0 +1,14 @@
+python main_train.py \
+    --image_dir data/iu_xray/images/ \
+    --ann_path data/iu_xray/annotation.json \
+    --dataset_name iu_xray \
+    --save_dir results/iu_xray_scst/ \
+    --load results/iu_xray_new_4/model_best.pth \
+    --use_scst True \
+    --lr_ve 0 \
+    --lr_ed 5e-6 \
+    --batch_size 8 \
+    --epochs 15 \
+    --monitor_metric BLEU_2 \
+    --max_seq_length 60 \
+    --num_workers 1
